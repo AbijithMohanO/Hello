@@ -1,0 +1,21 @@
+# input the cash
+c = int(input("Change owed: "))
+# reprompt if input is less than 0
+while c <= 0:
+    c = int(input("change owed: "))
+counter = 0
+# find change
+while c >= 25:
+    c -= 25
+    counter += 1
+while c >= 10:
+    c -= 10
+    counter += 1
+while c >= 5:
+    c -= 5
+    counter += 1
+while c >= 1:
+    c -= 1
+    counter += 1
+
+print("Minimum number of coins :", counter)
